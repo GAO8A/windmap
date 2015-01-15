@@ -97,7 +97,7 @@ function init() {
 }
 
 //// The app
-d3.json("data/uk.json", function(error, uk) {
+d3.json("uk.json", function(error, uk) {
   // UK map drawing courtesy of http://bost.ocks.org/mike/map/
   var subunits = topojson.object(uk, uk.objects.subunits);
   svg.append("path")
@@ -117,5 +117,4 @@ d3.json("data/uk.json", function(error, uk) {
     .call(lineAnimate);
 });
 
-init();
 
